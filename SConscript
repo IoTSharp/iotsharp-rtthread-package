@@ -8,21 +8,12 @@ cwd = GetCurrentDir()
 src = []
 path = []
 
-src += Glob('iotsharp-c-sdk/src/jclient/*.c')
-src += Glob('iotsharp-c-sdk/src/sisclient/*.c')
-src += Glob('iotsharp-c-sdk/src/mqtt/MQTTClient-C/src/*.c')
-src += Glob('iotsharp-c-sdk/src/mqtt/MQTTPacket/src/*.c')
-src += Glob('iotsharp-c-sdk/common/*.c')
-src += Glob('iotsharp-c-sdk/public/net/tcp/*.c')
-src += Glob('iotsharp-c-sdk/platform/os/rt-thread/*.c')
+src += Glob('iotsharp-c-sdk/src/*.c')
 
-path += [cwd + '/iotsharp-c-sdk/common']
-path += [cwd + '/iotsharp-c-sdk/include/jclient']
-path += [cwd + '/iotsharp-c-sdk/include/mqtt']
-path += [cwd + '/iotsharp-c-sdk/include/sisclient']
-path += [cwd + '/iotsharp-c-sdk/platform/os/rt-thread']
-path += [cwd + '/iotsharp-c-sdk/src/mqtt/MQTTPacket/src']
-path += [cwd + '/iotsharp-c-sdk/public/net/tcp']
+
+path += [cwd + '/iotsharp-c-sdk/include']
+path += [cwd + '/iotsharp-c-sdk/src']
+
 
 if GetDepend(['PKG_USING_IOTSHARP_EXAMPLES']):
 	src += Glob('samples/*.c')

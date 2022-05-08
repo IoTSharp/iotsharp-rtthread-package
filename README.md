@@ -8,7 +8,7 @@ IoTSharp 是一个 基于.Net Core 开源的物联网基础平台， 支持 HTTP
 
 | 名称            | 说明 |
 | ----            | ---- |
-| jiot-c-sdk | sdk源码目录 |
+| iotsharp-c-sdk | sdk源码目录 |
 | docs            | 文档目录 |
 | samples  | 示例文件目录 |
 | LICENSE    | 许可证文件 |
