@@ -1,9 +1,9 @@
-#ifndef iotsharp_CLIENT_H
-#define iotsharp_CLIENT_H
+#ifndef IOTSHARP_CLIENT_H
+#define IOTSHARP_CLIENT_H
 /*********************************************************************************
- * æ–‡ä»¶åç§°: iotsharp_client.h
- * ä½œ   è€…: éº¦å£³é¥¼
- * ç‰ˆ   æœ¬:
+ * ÎÄ¼şÃû³Æ: iotsharp_client.h
+ * ×÷   Õß: Âó¿Ç±ı
+ * °æ   ±¾:
  **********************************************************************************/
 
 #include <stdio.h>
@@ -15,11 +15,20 @@
 #define SDK_PLATFORM "unknown"
 #endif
 
-#define NO_LOG_LEVL         0       //ä¸è¾“å‡ºæ—¥å¿—
-#define ERROR_LOG_LEVL      1       //è¾“å‡ºé”™è¯¯æ—¥å¿—
-#define INFO_LOG_LEVL       2       //è¾“å‡ºè¿è¡Œæ—¶æ—¥å¿—å’Œé”™è¯¯æ—¥å¿—
-#define DEBUG_LOG_LEVL      3       //è¾“å‡ºè°ƒè¯•æ—¥å¿—ã€è¿è¡Œæ—¶æ—¥å¿—å’Œé”™è¯¯æ—¥å¿—
- 
+#define NO_LOG_LEVL         0       //²»Êä³öÈÕÖ¾
+#define ERROR_LOG_LEVL      1       //Êä³ö´íÎóÈÕÖ¾
+#define INFO_LOG_LEVL       2       //Êä³öÔËĞĞÊ±ÈÕÖ¾ºÍ´íÎóÈÕÖ¾
+#define DEBUG_LOG_LEVL      3       //Êä³öµ÷ÊÔÈÕÖ¾¡¢ÔËĞĞÊ±ÈÕÖ¾ºÍ´íÎóÈÕÖ¾
+#define DATATYPE_LOG_LEVL      3       //Êä³öµ÷ÊÔÈÕÖ¾¡¢ÔËĞĞÊ±ÈÕÖ¾ºÍ´íÎóÈÕÖ¾
+#define DEBUG_LOG_LEVL      3       //Êä³öµ÷ÊÔÈÕÖ¾¡¢ÔËĞĞÊ±ÈÕÖ¾ºÍ´íÎóÈÕÖ¾
+
+int iotsharp_start(void);
+int iotsharp_stop(void);
+int  iotsharp_upload_telemetry_for_gateway(char* _devname,char* playload);//±¾ÉíÊÇÍø¹ØÎª×ÓÉè±¸ÉÏ´«Ò£²âÊı¾İ¡£
+int  iotsharp_upload_telemetry_to_device(char* playload);//ÉÏ´«Ò£²âÊı¾İ
+int  iotsharp_upload_attribute_for_gateway(char* _devname,char* playload);//±¾ÉíÊÇÍø¹ØÎª×ÓÉè±¸ÉÏ´«ÊôĞÔÊı¾İ
+int  iotsharp_upload_attribute_to_device(char* playload);//ÉÏ´«ÊôĞÔ
+
 #endif
 
 
