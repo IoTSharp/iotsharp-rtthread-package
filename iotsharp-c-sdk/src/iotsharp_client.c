@@ -12,7 +12,7 @@
 
 #include "paho_mqtt.h"
 
-#define MQTT_URI                PKG_USING_IOTSHARP_DEVICE_SERVER
+#define MQTT_URI                PKG_USING_IOTSHARP_SERVER
 #define MQTT_USERNAME           PKG_USING_IOTSHARP_DEVICE_NAME
 #define MQTT_PASSWORD           PKG_USING_IOTSHARP_DEVICE_TOKEN
 
